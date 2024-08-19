@@ -1,0 +1,433 @@
+{
+  "name": "swiss-art-initiatives",
+  "title": "Self-organized Art Initiatives in Switzerland",
+  "description": "This data set was created as part of the research project 'Off Off Of?' at the Lucerne School of Design, Film and Art. ",
+  "contributors": [
+    {
+      "title": "Rachel Mader",
+      "role": "researcher"
+    },
+    {
+      "title": "Pablo Müller",
+      "role": "researcher"
+    },
+    {
+      "title": "Birk Weiberg",
+      "role": "data steward"
+    }
+  ],
+  "homepage": "https://github.com/birk/swiss-art-initiatives",
+  "profile": "tabular-data-package",
+  "version": "1.0",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "title": "Creative Commons Attribution 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "resources": [
+    {
+      "name": "projects",
+      "type": "table",
+      "path": "data/projects.csv",
+      "profile": "tabular-data-resource",
+      "scheme": "file",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8-sig",
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "title": "ID",
+            "type": "integer",
+            "description": "The unique id of the project referenced by the other tables."
+          },
+          {
+            "name": "title",
+            "title": "Name",
+            "type": "string",
+            "description": "Name of the project."
+          },
+          {
+            "name": "text_self",
+            "title": "Self-description",
+            "type": "string",
+            "description": "Texts that describe the projects by themselves."
+          },
+          {
+            "name": "description",
+            "title": "Description",
+            "type": "string",
+            "description": "Texts that describe the projects."
+          },
+          {
+            "name": "agenda",
+            "title": "Agenda",
+            "type": "string",
+            "description": "Information about exhibitions amd events."
+          },
+          {
+            "name": "reception",
+            "title": "Reception",
+            "type": "string",
+            "description": "Texts by journalists, critiques, and other third parties."
+          },
+          {
+            "name": "collaborations",
+            "title": "Collaborations",
+            "type": "string",
+            "description": "Information about collaborations with others."
+          },
+          {
+            "name": "publications",
+            "title": "Publications",
+            "type": "string",
+            "description": "Bibliographical references."
+          },
+          {
+            "name": "org_form",
+            "title": "Form of organization",
+            "type": "string",
+            "categories": [
+              "Einfrau/Einmann-Projekt",
+              "Freundeskreis",
+              "Gruppe",
+              "Organisation",
+              "Team"
+            ],
+            "description": "Classification of the form of organization: single person, group of friends, group, organization, team."
+          },
+          {
+            "name": "org_struct",
+            "title": "Organization structure",
+            "type": "string",
+            "description": "Description of the organization structure."
+          },
+          {
+            "name": "legal_struct",
+            "title": "Legal structure",
+            "type": "string",
+            "categories": [
+              "Genossenschaft",
+              "Genossenschaft Verein",
+              "GmbH",
+              "Stiftung",
+              "Stiftung Genossenschaft",
+              "Verein"
+            ],
+            "description": "Declaration of the legal structure: cooperative, cooperative/association,  LLC, foundation, foundation/cooperative, association"
+          },
+          {
+            "name": "finance",
+            "title": "Finance",
+            "type": "string",
+            "description": "Description of the financing."
+          },
+          {
+            "name": "notes",
+            "title": "Notes",
+            "type": "string",
+            "description": "Misc. notes."
+          },
+          {
+            "name": "website_urls",
+            "title": "Website URLs",
+            "type": "string",
+            "description": "List of website URLs, line break separated."
+          },
+          {
+            "name": "archive_repo",
+            "title": "Archive/repository",
+            "type": "string",
+            "description": "Information about archival holdings."
+          },
+          {
+            "name": "from_date",
+            "title": "Inception date",
+            "type": "date",
+            "description": "Inception date of the project, formated yyyy-mm-dd."
+          },
+          {
+            "name": "from_trunc",
+            "title": "Inception date trunctation",
+            "type": "integer",
+            "categories": [
+              {
+                "value": 0,
+                "label": "exact date"
+              },
+              {
+                "value": 1,
+                "label": "month exact"
+              },
+              {
+                "value": 2,
+                "label": "year exact"
+              }
+            ],
+            "description": "Precision of the inception date."
+          },
+          {
+            "name": "until_date",
+            "title": "End date",
+            "type": "date",
+            "description": "End date of the project, formated yyyy-mm-dd."
+          },
+          {
+            "name": "until_trunc",
+            "title": "End date trunctation",
+            "type": "integer",
+            "categories": [
+              {
+                "value": 0,
+                "label": "exact date"
+              },
+              {
+                "value": 1,
+                "label": "month exact"
+              },
+              {
+                "value": 2,
+                "label": "year exact"
+              }
+            ],
+            "description": "Precision of the end date."
+          },
+          {
+            "name": "cantons",
+            "title": "Cantons",
+            "type": "string",
+            "description": "List of cantons, two letter code, comma separated.",
+            "example": "ZH, BE, SG"
+          },
+          {
+            "name": "radval_1",
+            "title": "Spider value 1: Publishing",
+            "type": "integer",
+            "description": "Value of the spider, 0 to 4"
+          },
+          {
+            "name": "radval_2",
+            "title": "Spider value 2: Exhibitions",
+            "type": "integer",
+            "description": "Value of the spider, 0 to 4"
+          },
+          {
+            "name": "radval_3",
+            "title": "Spider value 3: Laboratory",
+            "type": "integer",
+            "description": "Value of the spider, 0 to 4"
+          },
+          {
+            "name": "radval_4",
+            "title": "Spider value 4: Situativeness",
+            "type": "integer",
+            "description": "Value of the spider, 0 to 4"
+          },
+          {
+            "name": "radval_5",
+            "title": "Spider value 5: Think Tank",
+            "type": "integer",
+            "description": "Value of the spider, 0 to 4"
+          },
+          {
+            "name": "radval_6",
+            "title": "Spider value 6: Platform",
+            "type": "integer",
+            "description": "Value of the spider, 0 to 4"
+          },
+          {
+            "name": "radval_7",
+            "title": "Spider value 7: Meeting Point",
+            "type": "integer",
+            "description": "Value of the spider, 0 to 4"
+          }
+        ]
+      }
+    },
+    {
+      "name": "people",
+      "type": "table",
+      "path": "data/people.csv",
+      "profile": "tabular-data-resource",
+      "scheme": "file",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8-sig",
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "title": "ID",
+            "type": "integer",
+            "description": "Incremental ID. However, persons might appear more than once if they have participated in several projects."
+          },
+          {
+            "name": "project_id",
+            "title": "Project ID",
+            "type": "integer",
+            "description": "Reference to the projects table."
+          },
+          {
+            "name": "sort_order",
+            "title": "Sort order",
+            "type": "integer",
+            "description": "Order within the project."
+          },
+          {
+            "name": "title",
+            "title": "Full name",
+            "type": "string",
+            "description": "Full name of the person. Also contains legal entities."
+          },
+          {
+            "name": "first_name",
+            "title": "First name",
+            "type": "string",
+            "description": "First name of the person."
+          },
+          {
+            "name": "last_name",
+            "title": "Last name",
+            "type": "string",
+            "description": "Last name of the person."
+          },
+          {
+            "name": "role",
+            "title": "Role",
+            "type": "any",
+            "description": "Role of the person in the project."
+          },
+          {
+            "name": "website_urls",
+            "title": "Website URLs",
+            "type": "string",
+            "description": "Might contain several websites, separated by a line breaks."
+          }
+        ]
+      }
+    },
+    {
+      "name": "places",
+      "type": "table",
+      "path": "data/places.csv",
+      "profile": "tabular-data-resource",
+      "scheme": "file",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8-sig",
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "title": "ID",
+            "type": "integer",
+            "description": "Incremental ID, might contain duplicates."
+          },
+          {
+            "name": "project_id",
+            "title": "Project ID",
+            "type": "integer",
+            "description": "Reference to the projects table."
+          },
+          {
+            "name": "title",
+            "title": "Place name",
+            "type": "any",
+            "description": "Optional name of the place. Only used when the place exists independently from the project."
+          },
+          {
+            "name": "address",
+            "title": "Address",
+            "type": "string",
+            "description": "Steet and house number."
+          },
+          {
+            "name": "post_code",
+            "title": "Post code",
+            "type": "string",
+            "description": "Mostly 4 digits Swiss postal code, international post codes differ."
+          },
+          {
+            "name": "city",
+            "title": "City",
+            "type": "string",
+            "description": "City names."
+          },
+          {
+            "name": "canton",
+            "title": "Canton",
+            "type": "string",
+            "description": "Canton as two letters code, empty for international places."
+          },
+          {
+            "name": "pos_x",
+            "title": "CH1903 x",
+            "type": "number",
+            "description": "CH1903 x value, https://en.wikipedia.org/wiki/Swiss_coordinate_system"
+          },
+          {
+            "name": "pos_y",
+            "title": "CH1903 y",
+            "type": "number",
+            "description": "CH1903 y value, https://en.wikipedia.org/wiki/Swiss_coordinate_system"
+          },
+          {
+            "name": "from_date",
+            "title": "Start date",
+            "type": "string",
+            "description": "Start date of place usage, formated yyyy-mm-dd."
+          },
+          {
+            "name": "from_trunc",
+            "title": "Start date trunctation",
+            "type": "integer",
+            "categories": [
+              {
+                "value": 0,
+                "label": "exact date"
+              },
+              {
+                "value": 1,
+                "label": "month exact"
+              },
+              {
+                "value": 2,
+                "label": "year exact"
+              }
+            ],
+            "description": "Precision of the start date."
+          },
+          {
+            "name": "until_date",
+            "title": "End date",
+            "type": "string",
+            "description": "end date of place usage, formated yyyy-mm-dd."
+          },
+          {
+            "name": "until_trunc",
+            "title": "End date trunctation",
+            "type": "integer",
+            "categories": [
+              {
+                "value": 0,
+                "label": "exact date"
+              },
+              {
+                "value": 1,
+                "label": "month exact"
+              },
+              {
+                "value": 2,
+                "label": "year exact"
+              }
+            ],
+            "description": "Precision of the end date."
+          }
+        ]
+      }
+    }
+  ]
+}
