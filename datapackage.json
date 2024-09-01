@@ -375,6 +375,18 @@
             "description": "CH1903 y value, https://en.wikipedia.org/wiki/Swiss_coordinate_system"
           },
           {
+            "name": "WGS84_lat",
+            "title": "WGS84 latitude",
+            "type": "number",
+            "description": "coordinate location according to WGS84, https://en.wikipedia.org/wiki/World_Geodetic_System"
+          },
+          {
+            "name": "WGS84_lon",
+            "title": "WGS84 longitude",
+            "type": "number",
+            "description": "coordinate location according to WGS84, https://en.wikipedia.org/wiki/World_Geodetic_System"
+          },
+          {
             "name": "from_date",
             "title": "Start date",
             "type": "string",

@@ -1,1 +1,2 @@
 frictionless==5.17.0
+pandas==2.1.4

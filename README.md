@@ -8,6 +8,10 @@ The data set requires further cleaning, which is planned for [GLAMhack24](https:
 
 [![Frictionless](https://github.com/birk/swiss-art-initiatives/actions/workflows/frictionless.yaml/badge.svg)](https://repository.frictionlessdata.io/pages/dashboard.html?user=birk&repo=swiss-art-initiatives&flow=frictionless)
 
+## Processing steps
+
+- Geocoordinates (WGS84) have been added to `data/places.csv` via `retrieve_WGS84.py` using the Nominatim API.
+
 ## License
 
 The content of the research project "Off OffOff Of?" is released under the license [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), unless differently stated; the structured data about the self-organized art initiatives are released with the license [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
