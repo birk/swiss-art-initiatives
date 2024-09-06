@@ -14,8 +14,7 @@ The data set requires further cleaning, which is planned for [GLAMhack24](https:
 
 ## Data Cleaning
 
-- Readapted Data for Wikidata, formatted columbs for dates, single lined websites, social media handles
-- Reconsiled Wikidata in relation to the project table, added linking Q-Numbers
+- Readapted Data for Wikidata, formatted columbs for dates, single lined websites, social media handles, reconsiled Wikidata, added linking Q-Numbers
 
 ## License
 
