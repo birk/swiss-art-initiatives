@@ -12,6 +12,10 @@ The data set requires further cleaning, which is planned for [GLAMhack24](https:
 
 - Geocoordinates (WGS84) have been added to `data/places.csv` via `retrieve_WGS84.py` using the Nominatim API.
 
+## Data Cleaning
+
+- Readapted Data for Wikidata, formatted columbs for dates, single lined websites, reconsiled Wikidata, added linking Q-Numbers and social media handles
+
 ## License
 
 The content of the research project "Off OffOff Of?" is released under the license [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), unless differently stated; the structured data about the self-organized art initiatives are released with the license [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
