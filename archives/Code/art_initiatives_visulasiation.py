@@ -104,7 +104,7 @@ sns.lineplot(x=ts_data.index, y=ts_data, label='Number of Initiatives', marker='
 # Customize plot appearance
 plt.xlabel('Year', fontsize=14, fontweight='bold')
 plt.ylabel('Number of Initiatives', fontsize=14, fontweight='bold')
-plt.title('Swiss Art Initiatives', fontsize=16, fontweight='bold')
+plt.title('Realtime Swiss Art Initiatives based on Wikidata', fontsize=16, fontweight='bold')
 plt.legend(fontsize=12)  # Ensure the legend is included
 plt.grid(True, linestyle='--', alpha=0.7)
 
