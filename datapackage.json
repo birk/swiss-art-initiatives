@@ -51,6 +51,12 @@
             "description": "Name of the project."
           },
           {
+            "name": "project_q",
+            "title": "Wikidata ID",
+            "type": "string",
+            "description": "Wikidata identifier"
+          },
+          {
             "name": "text_self",
             "title": "Self-description",
             "type": "string",
@@ -66,7 +72,7 @@
             "name": "agenda",
             "title": "Agenda",
             "type": "string",
-            "description": "Information about exhibitions amd events."
+            "description": "Information about exhibitions and events."
           },
           {
             "name": "reception",
@@ -138,6 +144,18 @@
             "description": "List of website URLs, line break separated."
           },
           {
+            "name": "instagram_handle",
+            "title": "Instagram",
+            "type": "string",
+            "description": "Instagram handle"
+          },
+          {
+            "name": "facebook_handle",
+            "title": "Facebook",
+            "type": "string",
+            "description": "Facebook handle"
+          },
+          {
             "name": "archive_repo",
             "title": "Archive/repository",
             "type": "string",
@@ -170,6 +188,12 @@
             "description": "Precision of the inception date."
           },
           {
+            "name": "from_date_wiki",
+            "title": "Inception date",
+            "type": "string",
+            "description": "Inception date of the project, formated yyyy(-mm(-dd)) for Wikidata."
+          },
+          {
             "name": "until_date",
             "title": "End date",
             "type": "date",
@@ -194,6 +218,12 @@
               }
             ],
             "description": "Precision of the end date."
+          },
+          {
+            "name": "until_date_wiki",
+            "title": "End date",
+            "type": "string",
+            "description": "End date of the project, formated yyyy(-mm(-dd)) for Wikidata."
           },
           {
             "name": "cantons",
@@ -271,6 +301,12 @@
             "description": "Reference to the projects table."
           },
           {
+            "name": "project_q",
+            "title": "Wikidata project ID",
+            "type": "string",
+            "description": "Wikidata identifier of the project"
+          },
+          {
             "name": "sort_order",
             "title": "Sort order",
             "type": "integer",
@@ -281,6 +317,28 @@
             "title": "Full name",
             "type": "string",
             "description": "Full name of the person. Also contains legal entities."
+          },
+          {
+            "name": "person_q",
+            "title": "Wikidata person ID",
+            "type": "string",
+            "description": "Wikidata identifier of the person"
+          },
+          {
+            "name": "class_q",
+            "title": "Wikidata class ID",
+            "type": "string",
+            "categories": [
+              {
+                "value": "Q5",
+                "label": "human"
+              },
+              {
+                "value": "Q13473501",
+                "label": "collective"
+              }
+            ],
+            "description": "Wikidata class of the person/group"
           },
           {
             "name": "first_name",
@@ -299,6 +357,34 @@
             "title": "Role",
             "type": "any",
             "description": "Role of the person in the project."
+          },
+          {
+            "name": "role_wiki",
+            "title": "Wikidata class ID of the role",
+            "type": "string",
+            "categories": [
+              {
+                "value": "P112",
+                "label": "founded by"
+              },
+              {
+                "value": "P767",
+                "label": "contributor"
+              }
+            ],
+            "description": "Wikidata class of role of the person/group in the project."
+          },
+          {
+            "name": "start_date",
+            "title": "Start date",
+            "type": "number",
+            "description": "Starting year automatically extracted from the role text."
+          },
+          {
+            "name": "end_date",
+            "title": "End date",
+            "type": "number",
+            "description": "End year automatically extracted from the role text."
           },
           {
             "name": "website_urls",
@@ -333,14 +419,20 @@
             "description": "Reference to the projects table."
           },
           {
+            "name": "project_q",
+            "title": "Wikidata project ID",
+            "type": "string",
+            "description": "Wikidata identifier"
+          },
+          {
             "name": "title",
             "title": "Place name",
             "type": "any",
             "description": "Optional name of the place. Only used when the place exists independently from the project."
           },
           {
-            "name": "address",
-            "title": "Address",
+            "name": "street",
+            "title": "Street",
             "type": "string",
             "description": "Steet and house number."
           },
@@ -357,10 +449,28 @@
             "description": "City names."
           },
           {
+            "name": "city_q",
+            "title": "Wikidata city ID",
+            "type": "string",
+            "description": "Wikidata identifier"
+          },
+          {
+            "name": "address",
+            "title": "Address",
+            "type": "string",
+            "description": "Steet, house number, post code and city combined for Wikidata."
+          },
+          {
             "name": "canton",
             "title": "Canton",
             "type": "string",
             "description": "Canton as two letters code, empty for international places."
+          },
+          {
+            "name": "lang",
+            "title": "Address language",
+            "type": "string",
+            "description": "Language code of the address as required by Wikidata."
           },
           {
             "name": "pos_x",
@@ -413,6 +523,12 @@
             "description": "Precision of the start date."
           },
           {
+            "name": "from_date_wiki",
+            "title": "Inception date",
+            "type": "string",
+            "description": "Inception date of the project, formated yyyy(-mm(-dd)) for Wikidata."
+          },
+          {
             "name": "until_date",
             "title": "End date",
             "type": "string",
@@ -437,6 +553,12 @@
               }
             ],
             "description": "Precision of the end date."
+          },
+          {
+            "name": "until_date_wiki",
+            "title": "End date",
+            "type": "string",
+            "description": "End date of the project, formated yyyy(-mm(-dd)) for Wikidata."
           }
         ]
       }

@@ -11,11 +11,63 @@ The data set requires further cleaning, which is planned for [GLAMhack24](https:
 ## Processing steps
 
 - Geocoordinates (WGS84) have been added to `data/places.csv` via `retrieve_WGS84.py` using the Nominatim API.
+- Data has been cleaned and adapted for Wikidata using [OpenRefine](https://openrefine.org).
+- Reconciled against Wikidata, Q-numbers have been added to the data sets.
 
-## Data Cleaning
+## Wikidata
 
-- Readapted Data for Wikidata, formatted columbs for dates, single lined websites, reconsiled Wikidata, added linking Q-Numbers and social media handles
-- Added adress and website languages, reconsiled projects and people vis-a-vis Wikidata
+Parts of the data have been ingested to Wikidata. The ingested self-organized art initiatives are identified as [described by source (P1343)](http://www.wikidata.org/entity/P1343) [Unabhängig, prekär, professionell (Q130250557)](http://www.wikidata.org/entity/Q130250557), the main publication of the research project.
+
+The following queries can be used to retrieve the data.
+
+Simple list of all initiatives:
+
+```SPARQL
+SELECT ?item ?itemLabel WHERE
+{
+  ?item wdt:P1343 wd:Q130250557.
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+}
+```
+
+[https://w.wiki/B99B](https://w.wiki/B99B)
+
+Example of a list with additional information:
+
+```SPARQL
+SELECT ?item ?itemLabel ?placeLabel ?start ?end WHERE
+{
+  ?item wdt:P1343 wd:Q130250557.
+  OPTIONAL {
+    ?item wdt:P276 ?place.
+  }
+  OPTIONAL {
+    ?item wdt:P571 ?start.
+  }
+  OPTIONAL {
+    ?item wdt:P576 ?end.
+  }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+}
+```
+
+[https://w.wiki/B99K](https://w.wiki/B99K)
+
+World map of self-organized art initiatives:
+
+```SPARQL
+#defaultView:Map
+SELECT DISTINCT ?project ?projectLabel ?geo WHERE {
+  { ?project wdt:P31 wd:Q3325736. }
+  UNION
+  { ?project wdt:P31 wd:Q4034417. }
+  # ?project wdt:P17 wd:Q39. # Switzerland only
+  ?project wdt:P625 ?geo.
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+}
+```
+
+[https://w.wiki/B99N](https://w.wiki/B99N)
 
 ## License
 
