@@ -4,7 +4,7 @@ This data set was created as part of the ["Off OffOff Of?"](https://www.hslu.ch/
 
 The data set consist of 3 tables, where `data/projects.csv` is the main table and `data/people.csv` and `data/places.csv` refer to it with additional information. `datapackage.json` explains the structure and the data types according to [Frictionless Data](https://frictionlessdata.io) conventions.
 
-The data set requires further cleaning, which is planned for [GLAMhack24](https://opendata.ch/de/events/glamhack24/).
+The data set has been cleaned up and ingested into Wikidata during [GLAMhack24](https://opendata.ch/de/events/glamhack24/).
 
 [![Frictionless](https://github.com/birk/swiss-art-initiatives/actions/workflows/frictionless.yaml/badge.svg)](https://repository.frictionlessdata.io/pages/dashboard.html?user=birk&repo=swiss-art-initiatives&flow=frictionless)
 
