@@ -5,7 +5,7 @@ import time
 # Script used once to retrieve WGS84 geodata from Nominatim API for data/places.csv based of the given address.
 
 # Read the CSV file
-df = pd.read_csv('data/places.csv', dtype=str)
+df = pd.read_csv('../data/places.csv', dtype=str)
 df.fillna("", inplace=True)
 
 # Function to get WGS84 geodata using Nominatim API
@@ -58,4 +58,4 @@ num_cols = df.shape[1]
 df = df.iloc[:, :num_cols-2]
 
 # Save the updated CSV with WGS84
-df.to_csv('data/places_with_WGS84.csv', lineterminator='\n', index=False)
+df.to_csv('../data/places_with_WGS84.csv', lineterminator='\n', index=False)

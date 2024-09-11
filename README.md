@@ -10,7 +10,7 @@ The data set has been cleaned up and ingested into Wikidata during [GLAMhack24](
 
 ## Processing steps
 
-- Geocoordinates (WGS84) have been added to `data/places.csv` via `retrieve_WGS84.py` using the Nominatim API.
+- Geocoordinates (WGS84) have been added to `data/places.csv` via `scripts/retrieve_WGS84.py` using the Nominatim API.
 - Data has been cleaned and adapted for Wikidata using [OpenRefine](https://openrefine.org).
 - Reconciled against Wikidata, Q-numbers have been added to the data sets.
 
