@@ -8,6 +8,8 @@ The data set has been cleaned up and ingested into Wikidata during [GLAMhack24](
 
 [![Frictionless](https://github.com/birk/swiss-art-initiatives/actions/workflows/frictionless.yaml/badge.svg)](https://repository.frictionlessdata.io/pages/dashboard.html?user=birk&repo=swiss-art-initiatives&flow=frictionless)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13767099.svg)](https://doi.org/10.5281/zenodo.13767099)
+
 ## Processing steps
 
 - Geocoordinates (WGS84) have been added to `data/places.csv` via `scripts/retrieve_WGS84.py` using the Nominatim API.
